@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>css-总结2 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="过渡（transition）​          通过过渡可以指定一个属性发生变化时的切换方式 transition-property: 指定要执行过渡的属性   ​        多个属性间使用,隔开  ​        如果所有属性都需要过渡，则使用all关键字 ​        大部分属性都支持过渡效果，注意过渡时必须是从一个有效数值向另外一个有效数值进行过渡   transition-du">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css-总结2">
+<meta property="og:url" content="http://example.com/2021/12/03/css-%E6%80%BB%E7%BB%932/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="过渡（transition）​          通过过渡可以指定一个属性发生变化时的切换方式 transition-property: 指定要执行过渡的属性   ​        多个属性间使用,隔开  ​        如果所有属性都需要过渡，则使用all关键字 ​        大部分属性都支持过渡效果，注意过渡时必须是从一个有效数值向另外一个有效数值进行过渡   transition-du">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-12-03T08:35:27.000Z">
+<meta property="article:modified_time" content="2021-12-03T08:55:04.754Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-css-总结2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/03/css-%E6%80%BB%E7%BB%932/" class="article-date">
+  <time class="dt-published" datetime="2021-12-03T08:35:27.000Z" itemprop="datePublished">2021-12-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      css-总结2
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="过渡（transition）"><a href="#过渡（transition）" class="headerlink" title="过渡（transition）"></a>过渡（transition）</h3><p>​          通过过渡可以指定一个属性发生变化时的切换方式</p>
+<p>transition-property: 指定要执行过渡的属性  </p>
+<p>​        多个属性间使用,隔开 </p>
+<p>​        如果所有属性都需要过渡，则使用all关键字</p>
+<p>​        大部分属性都支持过渡效果，注意过渡时必须是从一个有效数值向另外一个有效数值进行过渡</p>
+<p>  transition-duration: 指定过渡效果的持续时间</p>
+<p>​        时间单位：s 和 ms  1s = 1000ms</p>
+<p>​       transition-timing-function: 过渡的时序函数</p>
+<p>​        指定过渡的执行的方式  </p>
+<p>​        可选值：</p>
+<p>​          ease 默认值，慢速开始，先加速，再减速</p>
+<p>​          linear 匀速运动</p>
+<p>​          ease-in 加速运动</p>
+<p>​          ease-out 减速运动</p>
+<p>​          ease-in-out 先加速 后减速</p>
+<p>​          cubic-bezier() 来指定时序函数    <a target="_blank" rel="noopener" href="https://cubic-bezier.com/">https://cubic-bezier.com</a></p>
+<p>​          steps() 分步执行过渡效果</p>
+<p>​            可以设置一个第二个值：</p>
+<p>​              end ， 在时间结束时执行过渡(默认值)</p>
+<p>​              start ， 在时间开始时执行过渡</p>
+<p> transition-delay: 过渡效果的延迟，等待一段时间后在执行过渡  </p>
+<p>transition 可以同时设置过渡相关的所有属性，只有一个要求，如果要写延迟，则两个时间中第一个是持续时间，第二个是延迟</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transition</span>:<span class="number">2s</span> margin-left <span class="number">1s</span> <span class="built_in">cubic-bezier</span>(.<span class="number">24</span>,.<span class="number">95</span>,.<span class="number">82</span>,-<span class="number">0.88</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><p> 动画和过渡类似，都是可以实现一些动态的效果，</p>
+<p>​        不同的是过渡需要在某个属性发生变化时才会触发</p>
+<p>​        动画可以自动触发动态效果</p>
+<p>​     </p>
+<p> 设置动画效果，必须先要设置一个关键帧，关键帧设置了动画执行每一个步骤</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> test &#123;</span><br><span class="line">           <span class="comment">/* from表示动画的开始位置 也可以使用 0% */</span></span><br><span class="line">           <span class="selector-tag">from</span>&#123;</span><br><span class="line">               <span class="attribute">margin-left</span>: <span class="number">0</span>;</span><br><span class="line">               <span class="attribute">background-color</span>: orange;</span><br><span class="line">           &#125; </span><br><span class="line"></span><br><span class="line">           <span class="comment">/* to动画的结束位置 也可以使用100%*/</span></span><br><span class="line">           <span class="selector-tag">to</span>&#123;</span><br><span class="line">               <span class="attribute">background-color</span>: red;</span><br><span class="line">               <span class="attribute">margin-left</span>: <span class="number">700px</span>;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<p>animation-name: 要对当前元素生效的关键帧的名字</p>
+<p>animation-duration: 动画的执行时间</p>
+<p>animation-delay: 2s;</p>
+<p>animation-timing-function: ease-in-out;</p>
+<p>animation-iteration-count 动画执行的次数 </p>
+<p>​        可选值：</p>
+<p>​          次数</p>
+<p>​          infinite 无限执行</p>
+<p> animation-direction</p>
+<p>​        指定动画运行的方向</p>
+<p>​          可选值：</p>
+<p>​          normal 默认值  从 from 向 to运行 每次都是这样 </p>
+<p>​          reverse 从 to 向 from 运行 每次都是这样 </p>
+<p>​          alternate 从 from 向 to运行 重复执行动画时反向执行</p>
+<p>​          alternate-reverse 从 to 向 from运行 重复执行动画时反向执行</p>
+<p>animation-play-state: 设置动画的执行状态 </p>
+<p>​        可选值：</p>
+<p>​          running 默认值 动画执行</p>
+<p>​          paused 动画暂停</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">div</span>&#123;</span><br><span class="line">           <span class="attribute">animation-play-state</span>: paused;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<p> animation-fill-mode: 动画的填充模式</p>
+<p>​        可选值：</p>
+<p>​          none 默认值 动画执行完毕元素回到原来位置</p>
+<p>​          forwards 动画执行完毕元素会停止在动画结束的位置</p>
+<p>​          backwards 动画延时等待时，元素就会处于开始位置</p>
+<p>​          both 结合了forwards 和 backwards</p>
+<h3 id="变形-transform"><a href="#变形-transform" class="headerlink" title="变形 transform"></a>变形 transform</h3><h4 id="平移"><a href="#平移" class="headerlink" title="平移"></a>平移</h4><p> 变形就是指通过CSS来改变元素的形状或位置</p>
+<p>​        变形不会影响到页面的布局</p>
+<p>​        transform 用来设置元素的变形效果</p>
+<p>​          平移：</p>
+<p>​            translateX() 沿着x轴方向平移</p>
+<p>​            translateY() 沿着y轴方向平移</p>
+<p>​            translateZ() 沿着z轴方向平移</p>
+<p>​              平移元素，百分比是相对于自身计算的</p>
+<p> z轴平移，调整元素在z轴的位置，正常情况就是调整元素和人眼之间的距离，</p>
+<p>​          距离越大，元素离人越近</p>
+<p>​        z轴平移属于立体效果（近大远小），默认情况下网页是不支持透视，如果需要看见效果</p>
+<p>​          必须要设置网页的视距</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;</span><br><span class="line">      <span class="comment">/* 设置当前网页的视距为800px，人眼距离网页的距离 */</span></span><br><span class="line">      <span class="attribute">perspective</span>: <span class="number">800px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">实现移入上移隐形效果 且不影响页面的布局(如果使用<span class="attribute">margin</span> <span class="attribute">padding</span>等实现 则会影响布局)</span><br><span class="line">		<span class="selector-class">.box5</span>&#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">220px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">            <span class="attribute">transition</span>:all .<span class="number">3s</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">       <span class="selector-class">.box5</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">            <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">4px</span>);</span><br><span class="line">            <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">3</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h4><p>​    通过旋转可以使元素沿着x y 或 z旋转指定的角度</p>
+<p>​          rotateX()</p>
+<p>​          rotateY()</p>
+<p>​          rotateZ()</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(.<span class="number">25turn</span>);</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">rotateY</span>(<span class="number">180deg</span>) <span class="built_in">translateZ</span>(<span class="number">400px</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">transform</span>: <span class="built_in">rotateY</span>(<span class="number">180deg</span>);</span><br><span class="line">          <span class="comment">/* 是否显示元素的背面 */</span></span><br><span class="line"><span class="attribute">backface-visibility</span>: hidden;</span><br></pre></td></tr></table></figure>
+
+<h4 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h4><p>对元素进行缩放的函数：</p>
+<p>​          scaleX() 水平方向缩放</p>
+<p>​          scaleY() 垂直方向缩放</p>
+<p>​          scale() 双方向的缩放</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">鼠标移入图片放大效果</span><br><span class="line">		<span class="selector-tag">img</span>&#123;</span><br><span class="line">            <span class="attribute">transition</span>: .<span class="number">2s</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.img-wrapper</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">img</span>&#123;</span><br><span class="line">            <span class="attribute">transform</span>:<span class="built_in">scale</span>(<span class="number">1.2</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/12/03/css-%E6%80%BB%E7%BB%932/" data-id="ckwq5h7490000r4vfg0xjf6el" data-title="css-总结2" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/12/03/css-flex%E5%B8%83%E5%B1%80/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          css-flex布局
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/12/03/css-%E5%AE%9A%E4%BD%8D%E5%B8%83%E5%B1%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">css-定位布局</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/12/03/css-flex%E5%B8%83%E5%B1%80/">css-flex布局</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/03/css-%E6%80%BB%E7%BB%932/">css-总结2</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/03/css-%E5%AE%9A%E4%BD%8D%E5%B8%83%E5%B1%80/">css-定位布局</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/03/css-%E6%80%BB%E7%BB%931/">css</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/29/HTML/">HTML</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>css-普通布局 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="元素的水平方向的布局​          元素在其父元素中水平方向的位置由以下几个属性共同决定 ​            margin-left ​            border-left ​            padding-left ​            width ​            padding-right ​            border-right ​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css-普通布局">
+<meta property="og:url" content="http://example.com/2021/11/27/css-%E6%99%AE%E9%80%9A%E5%B8%83%E5%B1%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="元素的水平方向的布局​          元素在其父元素中水平方向的位置由以下几个属性共同决定 ​            margin-left ​            border-left ​            padding-left ​            width ​            padding-right ​            border-right ​">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-27T03:20:35.000Z">
+<meta property="article:modified_time" content="2021-12-03T03:28:39.586Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-css-普通布局" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/27/css-%E6%99%AE%E9%80%9A%E5%B8%83%E5%B1%80/" class="article-date">
+  <time class="dt-published" datetime="2021-11-27T03:20:35.000Z" itemprop="datePublished">2021-11-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      css-普通布局
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="元素的水平方向的布局"><a href="#元素的水平方向的布局" class="headerlink" title="元素的水平方向的布局"></a>元素的水平方向的布局</h3><p>​          元素在其父元素中水平方向的位置由以下几个属性共同决定</p>
+<p>​            margin-left</p>
+<p>​            border-left</p>
+<p>​            padding-left</p>
+<p>​            width</p>
+<p>​            padding-right</p>
+<p>​            border-right</p>
+<p>​            margin-right</p>
+<p>​          一个元素在其父元素中，水平布局必须要满足以下的等式</p>
+<p>margin-left+border-left+padding-left+width+padding-right+border-right+margin-right = 其父元素内容区的宽度 （必须满足）</p>
+<p>以上等式必须满足，如果相加结果使等式不成立，则称为过度约束，则等式会自动调整</p>
+<p>​            调整的情况：</p>
+<p>​              如果这七个值中没有为 auto 的情况，则浏览器会自动调整margin-right值以使等式满足</p>
+<p>​          这七个值中有三个值可以设置为auto</p>
+<p>​            width</p>
+<p>​            margin-left</p>
+<p>​            maring-right</p>
+<p>  如果某个值为auto，则会自动调整为auto的那个值以使等式成立</p>
+<p>  如果将一个宽度和一个外边距设置为auto，则宽度会调整到最大，设置为auto的外边距会自动为0</p>
+<p>​            如果将三个值都设置为auto，则外边距都是0，宽度最大</p>
+<p>​            如果将两个外边距设置为auto，宽度固定值，则会将外边距设置为相同的值</p>
+<p>​              所以我们经常利用这个特点来使一个元素在其父元素中水平居中</p>
+<p>​              示例：</p>
+<p>​                width:xxxpx;</p>
+<p>​                margin:0 auto;</p>
+<h3 id="垂直方向的布局"><a href="#垂直方向的布局" class="headerlink" title="垂直方向的布局"></a>垂直方向的布局</h3><p>默认情况下父元素的高度被内容撑开</p>
+<p>​        子元素是在父元素的内容区中排列的，</p>
+<p>​          如果子元素的大小超过了父元素，则子元素会从父元素中溢出</p>
+<p>​          使用 overflow 属性来设置父元素如何处理溢出的子元素</p>
+<p>​          可选值：</p>
+<p>​            visible，默认值 子元素会从父元素中溢出，在父元素外部的位置显示</p>
+<p>​            hidden 溢出内容将会被裁剪不会显示</p>
+<p>​            scroll 生成两个滚动条，通过滚动条来查看完整的内容</p>
+<p>​            auto 根据需要生成滚动条</p>
+<p>​        overflow-x: </p>
+<p>​        overflow-y:</p>
+<h3 id="特殊问题"><a href="#特殊问题" class="headerlink" title="特殊问题"></a>特殊问题</h3><p>垂直外边距的重叠（折叠）</p>
+<p>​        相邻的垂直方向外边距会发生重叠现象</p>
+<p>​        兄弟元素</p>
+<p>​           兄弟元素间的相邻垂直外边距会取两者之间的较大值（两者都是正值）</p>
+<p>​          特殊情况：</p>
+<p>​            如果相邻的外边距一正一负，则取两者的和</p>
+<p>​            如果相邻的外边距都是负值，则取两者中绝对值较大的</p>
+<p>​          兄弟元素之间的外边距的重叠，对于开发是有利的，所以我们不需要进行处理</p>
+<p>​        父子元素</p>
+<p>​          父子元素间相邻外边距，子元素的会传递给父元素（上外边距）</p>
+<p>​          父子外边距的折叠会影响到页面的布局，必须要进行处理</p>
+<p>解决方案</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.clearfix::before&#123;</span><br><span class="line">    <span class="attr">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    display: table;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* clearfix 这个样式可以同时解决高度塌陷和外边距重叠的问题，当你在遇到这些问题时，直接使用clearfix这个类即可 */</span></span><br><span class="line">        .clearfix::before,</span><br><span class="line">        .clearfix::after&#123;</span><br><span class="line">            <span class="attr">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">            display: table;</span><br><span class="line">            clear: both;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/11/27/css-%E6%99%AE%E9%80%9A%E5%B8%83%E5%B1%80/" data-id="ckwpttj9j00010wvfc0gp6xdy" data-title="css-普通布局" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/11/28/css-%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          css-浮动布局
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/12/03/css-flex%E5%B8%83%E5%B1%80/">css-flex布局</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/03/css-%E6%80%BB%E7%BB%932/">css-总结2</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/03/css-%E5%AE%9A%E4%BD%8D%E5%B8%83%E5%B1%80/">css-定位布局</a>
+          </li>
+        
+          <li>
+            <a href="/2021/12/03/css-%E6%80%BB%E7%BB%931/">css</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/29/HTML/">HTML</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
